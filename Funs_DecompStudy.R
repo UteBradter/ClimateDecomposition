@@ -1513,7 +1513,7 @@ FunCV <- function(ModelPath, ModelList, SpeciesData, SpeciesInfo, CovarData, Sea
 		CVSummary$Pears_Ind_Fi[i] <- cor(Finland$Count, Finland$PredsInd, method = "pearson")
 		Sweden <- CurModelData[substr(CurModelData$Route, 1, 1) != "F" & substr(CurModelData$Route, 1, 1) != "N", ]
 		CVSummary$Pears_Ind_Swe[i] <- cor(Sweden$Count, Sweden$PredsInd, method = "pearson")
-# Cross-validation for years 2010 - 2018 (because early years have no/few routes in Norway and Finland...
+# Cross-validation
 # ...extract model formulas
 		CallText <- unlist(strsplit(as.character(CurModel$call), split = ","))
 		ModelFormula <- formula(CallText[2])
